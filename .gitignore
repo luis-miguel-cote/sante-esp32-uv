@@ -61,3 +61,4 @@ secrets.*
 *.key
 *.p12
 *.pfx
+include/secrets.h
