@@ -13,11 +13,41 @@
 
 #include "secrets.h"
 static const char *TAG = "UV_DEVICE";
+
+static void wifi_init(void)
+{
+    esp_netif_init();
+    esp_event_loop_create_default();
+    esp_netif_create_default_wifi_sta();
+
+    wifi_init_config_t cfg = WIFI_INIT_CONFIG_DEFAULT();
+    esp_wifi_init(&cfg);
+
+    wifi_config_t wifi_config = {
+        .sta = {
+            .ssid = WIFI_SSID,
+            .password = WIFI_PASS,
+        },
+    };
+
+    esp_wifi_set_mode(WIFI_MODE_STA);
+    esp_wifi_set_config(WIFI_IF_STA, &wifi_config);
+    esp_wifi_start();
+    esp_wifi_connect();
+
+    ESP_LOGI(TAG, "Conectando a WiFi...");
+}
+
 void app_main(void)
 {
+    ESP_ERROR_CHECK(nvs_flash_init());
+
+    wifi_init();
+
+    vTaskDelay(pdMS_TO_TICKS(5000)); // Espera a que se establezca la conexión WiFi
     while (1)
     {
-        printf("ESP32 funcionando...\n");
+        ESP_LOGI(TAG, "ESP32 funcionando...");
         vTaskDelay(pdMS_TO_TICKS(3000));
     }
 }
