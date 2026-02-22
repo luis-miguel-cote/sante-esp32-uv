@@ -1,0 +1,29 @@
+# PlatformIO
+.pio/
+.build/
+libdeps/
+
+# VSCode
+.vscode/
+*.code-workspace
+
+# ESP-IDF
+sdkconfig
+sdkconfig.old
+sdkconfig.*.old
+sdkconfig.*.backup
+
+# Build artifacts
+build/
+*.bin
+*.elf
+*.map
+*.hex
+
+# CMake
+CMakeFiles/
+CMakeCache.txt
+
+# OS
+.DS_Store
+Thumbs.db
