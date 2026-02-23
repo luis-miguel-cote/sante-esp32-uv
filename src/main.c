@@ -38,6 +38,45 @@ static void wifi_init(void)
     ESP_LOGI(TAG, "Conectando a WiFi...");
 }
 
+static void send_uv_data(float uv_value)
+{
+    char post_data[200];
+
+    sprintf(post_data,
+            "{\"api_key\":\"%s\",\"valor_uv\":%.2f}",
+            API_KEY,
+            uv_value);
+
+    esp_http_client_config_t config = {
+        .url = API_URL,
+        .method = HTTP_METHOD_POST,
+
+        
+        .skip_cert_common_name_check = true,
+        .cert_pem = NULL,
+    };
+
+    esp_http_client_handle_t client = esp_http_client_init(&config);
+
+    esp_http_client_set_header(client, "Content-Type", "application/json");
+    esp_http_client_set_post_field(client, post_data, strlen(post_data));
+
+    esp_err_t err = esp_http_client_perform(client);
+
+    if (err == ESP_OK)
+    {
+        ESP_LOGI(TAG, "HTTP Status = %d",
+                 esp_http_client_get_status_code(client));
+    }
+    else
+    {
+        ESP_LOGE(TAG, "HTTP POST failed: %s",
+                 esp_err_to_name(err));
+    }
+
+    esp_http_client_cleanup(client);
+}
+
 void app_main(void)
 {
     ESP_ERROR_CHECK(nvs_flash_init());
@@ -47,7 +86,12 @@ void app_main(void)
     vTaskDelay(pdMS_TO_TICKS(5000)); // Espera a que se establezca la conexión WiFi
     while (1)
     {
-        ESP_LOGI(TAG, "ESP32 funcionando...");
-        vTaskDelay(pdMS_TO_TICKS(3000));
+        float uv_value = 7.5; // Simulado por ahora
+
+        ESP_LOGI(TAG, "Enviando UV: %.2f", uv_value);
+
+        send_uv_data(uv_value);
+
+        vTaskDelay(pdMS_TO_TICKS(180000)); // 3 minutos
     }
 }
