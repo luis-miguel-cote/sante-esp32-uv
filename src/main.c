@@ -10,10 +10,37 @@
 #include "nvs_flash.h"
 #include "esp_netif.h"
 #include "esp_http_client.h"
-
+#include "esp_crt_bundle.h"   
 #include "secrets.h"
 static const char *TAG = "UV_DEVICE";
+#include "esp_netif_sntp.h"
 
+
+static void initialize_sntp(void)
+{
+    ESP_LOGI(TAG, "Inicializando SNTP...");
+
+    esp_sntp_config_t config = ESP_NETIF_SNTP_DEFAULT_CONFIG("pool.ntp.org");
+
+    esp_netif_sntp_init(&config);
+
+    // Esperar a que sincronice
+    time_t now = 0;
+    struct tm timeinfo = {0};
+
+    int retry = 0;
+    const int retry_count = 10;
+
+    while (timeinfo.tm_year < (2020 - 1900) && ++retry < retry_count)
+    {
+        ESP_LOGI(TAG, "Esperando sincronización de hora...");
+        vTaskDelay(pdMS_TO_TICKS(2000));
+        time(&now);
+        localtime_r(&now, &timeinfo);
+    }
+
+    ESP_LOGI(TAG, "Hora sincronizada");
+}
 static void wifi_init(void)
 {
     esp_netif_init();
@@ -50,10 +77,7 @@ static void send_uv_data(float uv_value)
     esp_http_client_config_t config = {
         .url = API_URL,
         .method = HTTP_METHOD_POST,
-
-        
-        .skip_cert_common_name_check = true,
-        .cert_pem = NULL,
+        .crt_bundle_attach = esp_crt_bundle_attach,  // ← IMPORTANTE
     };
 
     esp_http_client_handle_t client = esp_http_client_init(&config);
@@ -80,10 +104,15 @@ static void send_uv_data(float uv_value)
 void app_main(void)
 {
     ESP_ERROR_CHECK(nvs_flash_init());
+   
 
     wifi_init();
 
     vTaskDelay(pdMS_TO_TICKS(5000)); // Espera a que se establezca la conexión WiFi
+
+     initialize_sntp();
+     vTaskDelay(pdMS_TO_TICKS(5000));
+
     while (1)
     {
         float uv_value = 7.5; // Simulado por ahora
