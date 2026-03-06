@@ -12,8 +12,11 @@
 #include "esp_http_client.h"
 #include "esp_crt_bundle.h"   
 #include "secrets.h"
-static const char *TAG = "UV_DEVICE";
 #include "esp_netif_sntp.h"
+#include "driver/adc.h"
+
+
+static const char *TAG = "UV_DEVICE";
 
 
 static void initialize_sntp(void)
@@ -100,7 +103,24 @@ static void send_uv_data(float uv_value)
 
     esp_http_client_cleanup(client);
 }
+static void adc_init(void)
+{
+    adc1_config_width(ADC_WIDTH_BIT_12);  // Resolución 0 - 4095
+    adc1_config_channel_atten(ADC1_CHANNEL_6, ADC_ATTEN_DB_11); 
+    // ADC1_CHANNEL_6 = GPIO34
+}
+static float read_uv_sensor(void)
+{
+    int raw = adc1_get_raw(ADC1_CHANNEL_6);
 
+    float voltage = (raw / 4095.0) * 3.3;
+
+    float uv_index = voltage * 10.0;
+
+    ESP_LOGI(TAG, "ADC Raw: %d Voltage: %.2f UV: %.2f", raw, voltage, uv_index);
+
+    return uv_index;
+}
 void app_main(void)
 {
     ESP_ERROR_CHECK(nvs_flash_init());
@@ -113,14 +133,18 @@ void app_main(void)
      initialize_sntp();
      vTaskDelay(pdMS_TO_TICKS(5000));
 
+     adc_init(); 
+
     while (1)
     {
-        float uv_value = 7.5; // Simulado por ahora
+        float uv_value = read_uv_sensor();
 
         ESP_LOGI(TAG, "Enviando UV: %.2f", uv_value);
 
         send_uv_data(uv_value);
 
-        vTaskDelay(pdMS_TO_TICKS(180000)); // 3 minutos
+        vTaskDelay(pdMS_TO_TICKS(180000)); // 3 minutos, esto se cambiar a futuro por un delay muy pequeño, para utilizar
+        //contador par que sea mucho mas rapido, por ejemplo si se va el wifi, detecte de una que no hay conexion
+        //reinicie el dispositivo o vuelva a tratar de conectarse
     }
 }
