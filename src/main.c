@@ -111,7 +111,15 @@ static void adc_init(void)
 }
 static float read_uv_sensor(void)
 {
-    int raw = adc1_get_raw(ADC1_CHANNEL_6);
+    int raw_sum = 0;
+
+    for(int i = 0; i < 10; i++)
+    {
+        raw_sum += adc1_get_raw(ADC1_CHANNEL_6);
+        vTaskDelay(pdMS_TO_TICKS(10));
+    }
+
+    int raw = raw_sum / 10;
 
     float voltage = (raw / 4095.0) * 3.3;
 

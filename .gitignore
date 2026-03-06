@@ -62,3 +62,4 @@ secrets.*
 *.p12
 *.pfx
 include/secrets.h
+dev.notes.md
