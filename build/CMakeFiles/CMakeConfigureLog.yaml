@@ -515,3 +515,175 @@ events:
         implicit fwks: []
       
       
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/.espressif/tools/cmake/3.30.2/share/cmake-3.30/Modules/CheckIncludeFile.cmake:90 (try_compile)"
+      - "C:/.espressif/tools/cmake/3.30.2/share/cmake-3.30/Modules/CheckTypeSize.cmake:251 (check_include_file)"
+      - "C:/Users/Luis Miguel Cote/esp/v5.2/esp-idf/CMakeLists.txt:286 (check_type_size)"
+    checks:
+      - "Looking for sys/types.h"
+    directories:
+      source: "D:/Estudio/desarrollo_web_boopcamp/Proyecto_final/sante-esp32-uv/build/CMakeFiles/CMakeScratch/TryCompile-iihpja"
+      binary: "D:/Estudio/desarrollo_web_boopcamp/Proyecto_final/sante-esp32-uv/build/CMakeFiles/CMakeScratch/TryCompile-iihpja"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "-mlongcalls -Wno-frame-address  -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy"
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/Luis Miguel Cote/esp/v5.2/esp-idf/tools/cmake;C:/Users/Luis Miguel Cote/esp/v5.2/esp-idf/tools/cmake/third_party"
+    buildResult:
+      variable: "HAVE_SYS_TYPES_H"
+      cached: true
+      stdout: |
+        Change Dir: 'D:/Estudio/desarrollo_web_boopcamp/Proyecto_final/sante-esp32-uv/build/CMakeFiles/CMakeScratch/TryCompile-iihpja'
+        
+        Run Build Command(s): C:/.espressif/tools/ninja/1.12.1/ninja.exe -v cmTC_b2dfa
+        [1/2] C:\\.espressif\\tools\\xtensa-esp-elf\\esp-13.2.0_20230928\\xtensa-esp-elf\\bin\\xtensa-esp32-elf-gcc.exe   -mlongcalls -Wno-frame-address  -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy -o CMakeFiles/cmTC_b2dfa.dir/CheckIncludeFile.c.obj -c D:/Estudio/desarrollo_web_boopcamp/Proyecto_final/sante-esp32-uv/build/CMakeFiles/CMakeScratch/TryCompile-iihpja/CheckIncludeFile.c
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\.espressif\\tools\\xtensa-esp-elf\\esp-13.2.0_20230928\\xtensa-esp-elf\\bin\\xtensa-esp32-elf-gcc.exe -mlongcalls -Wno-frame-address  -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy  CMakeFiles/cmTC_b2dfa.dir/CheckIncludeFile.c.obj -o cmTC_b2dfa   && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/.espressif/tools/cmake/3.30.2/share/cmake-3.30/Modules/CheckIncludeFile.cmake:90 (try_compile)"
+      - "C:/.espressif/tools/cmake/3.30.2/share/cmake-3.30/Modules/CheckTypeSize.cmake:252 (check_include_file)"
+      - "C:/Users/Luis Miguel Cote/esp/v5.2/esp-idf/CMakeLists.txt:286 (check_type_size)"
+    checks:
+      - "Looking for stdint.h"
+    directories:
+      source: "D:/Estudio/desarrollo_web_boopcamp/Proyecto_final/sante-esp32-uv/build/CMakeFiles/CMakeScratch/TryCompile-nwoe34"
+      binary: "D:/Estudio/desarrollo_web_boopcamp/Proyecto_final/sante-esp32-uv/build/CMakeFiles/CMakeScratch/TryCompile-nwoe34"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "-mlongcalls -Wno-frame-address  -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy"
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/Luis Miguel Cote/esp/v5.2/esp-idf/tools/cmake;C:/Users/Luis Miguel Cote/esp/v5.2/esp-idf/tools/cmake/third_party"
+    buildResult:
+      variable: "HAVE_STDINT_H"
+      cached: true
+      stdout: |
+        Change Dir: 'D:/Estudio/desarrollo_web_boopcamp/Proyecto_final/sante-esp32-uv/build/CMakeFiles/CMakeScratch/TryCompile-nwoe34'
+        
+        Run Build Command(s): C:/.espressif/tools/ninja/1.12.1/ninja.exe -v cmTC_b61b5
+        [1/2] C:\\.espressif\\tools\\xtensa-esp-elf\\esp-13.2.0_20230928\\xtensa-esp-elf\\bin\\xtensa-esp32-elf-gcc.exe   -mlongcalls -Wno-frame-address  -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy -o CMakeFiles/cmTC_b61b5.dir/CheckIncludeFile.c.obj -c D:/Estudio/desarrollo_web_boopcamp/Proyecto_final/sante-esp32-uv/build/CMakeFiles/CMakeScratch/TryCompile-nwoe34/CheckIncludeFile.c
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\.espressif\\tools\\xtensa-esp-elf\\esp-13.2.0_20230928\\xtensa-esp-elf\\bin\\xtensa-esp32-elf-gcc.exe -mlongcalls -Wno-frame-address  -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy  CMakeFiles/cmTC_b61b5.dir/CheckIncludeFile.c.obj -o cmTC_b61b5   && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/.espressif/tools/cmake/3.30.2/share/cmake-3.30/Modules/CheckIncludeFile.cmake:90 (try_compile)"
+      - "C:/.espressif/tools/cmake/3.30.2/share/cmake-3.30/Modules/CheckTypeSize.cmake:253 (check_include_file)"
+      - "C:/Users/Luis Miguel Cote/esp/v5.2/esp-idf/CMakeLists.txt:286 (check_type_size)"
+    checks:
+      - "Looking for stddef.h"
+    directories:
+      source: "D:/Estudio/desarrollo_web_boopcamp/Proyecto_final/sante-esp32-uv/build/CMakeFiles/CMakeScratch/TryCompile-txnjiv"
+      binary: "D:/Estudio/desarrollo_web_boopcamp/Proyecto_final/sante-esp32-uv/build/CMakeFiles/CMakeScratch/TryCompile-txnjiv"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "-mlongcalls -Wno-frame-address  -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy"
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/Luis Miguel Cote/esp/v5.2/esp-idf/tools/cmake;C:/Users/Luis Miguel Cote/esp/v5.2/esp-idf/tools/cmake/third_party"
+    buildResult:
+      variable: "HAVE_STDDEF_H"
+      cached: true
+      stdout: |
+        Change Dir: 'D:/Estudio/desarrollo_web_boopcamp/Proyecto_final/sante-esp32-uv/build/CMakeFiles/CMakeScratch/TryCompile-txnjiv'
+        
+        Run Build Command(s): C:/.espressif/tools/ninja/1.12.1/ninja.exe -v cmTC_b1aae
+        [1/2] C:\\.espressif\\tools\\xtensa-esp-elf\\esp-13.2.0_20230928\\xtensa-esp-elf\\bin\\xtensa-esp32-elf-gcc.exe   -mlongcalls -Wno-frame-address  -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy -o CMakeFiles/cmTC_b1aae.dir/CheckIncludeFile.c.obj -c D:/Estudio/desarrollo_web_boopcamp/Proyecto_final/sante-esp32-uv/build/CMakeFiles/CMakeScratch/TryCompile-txnjiv/CheckIncludeFile.c
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\.espressif\\tools\\xtensa-esp-elf\\esp-13.2.0_20230928\\xtensa-esp-elf\\bin\\xtensa-esp32-elf-gcc.exe -mlongcalls -Wno-frame-address  -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy  CMakeFiles/cmTC_b1aae.dir/CheckIncludeFile.c.obj -o cmTC_b1aae   && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/.espressif/tools/cmake/3.30.2/share/cmake-3.30/Modules/CheckTypeSize.cmake:147 (try_compile)"
+      - "C:/.espressif/tools/cmake/3.30.2/share/cmake-3.30/Modules/CheckTypeSize.cmake:272 (__check_type_size_impl)"
+      - "C:/Users/Luis Miguel Cote/esp/v5.2/esp-idf/CMakeLists.txt:286 (check_type_size)"
+    checks:
+      - "Check size of time_t"
+    directories:
+      source: "D:/Estudio/desarrollo_web_boopcamp/Proyecto_final/sante-esp32-uv/build/CMakeFiles/CMakeScratch/TryCompile-1s4lan"
+      binary: "D:/Estudio/desarrollo_web_boopcamp/Proyecto_final/sante-esp32-uv/build/CMakeFiles/CMakeScratch/TryCompile-1s4lan"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "-mlongcalls -Wno-frame-address  -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy"
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/Luis Miguel Cote/esp/v5.2/esp-idf/tools/cmake;C:/Users/Luis Miguel Cote/esp/v5.2/esp-idf/tools/cmake/third_party"
+    buildResult:
+      variable: "HAVE_TIME_T_SIZE"
+      cached: true
+      stdout: |
+        Change Dir: 'D:/Estudio/desarrollo_web_boopcamp/Proyecto_final/sante-esp32-uv/build/CMakeFiles/CMakeScratch/TryCompile-1s4lan'
+        
+        Run Build Command(s): C:/.espressif/tools/ninja/1.12.1/ninja.exe -v cmTC_ed896
+        [1/2] C:\\.espressif\\tools\\xtensa-esp-elf\\esp-13.2.0_20230928\\xtensa-esp-elf\\bin\\xtensa-esp32-elf-gcc.exe   -mlongcalls -Wno-frame-address  -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy -o CMakeFiles/cmTC_ed896.dir/TIME_T_SIZE.c.obj -c D:/Estudio/desarrollo_web_boopcamp/Proyecto_final/sante-esp32-uv/build/CMakeFiles/CMakeScratch/TryCompile-1s4lan/TIME_T_SIZE.c
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\.espressif\\tools\\xtensa-esp-elf\\esp-13.2.0_20230928\\xtensa-esp-elf\\bin\\xtensa-esp32-elf-gcc.exe -mlongcalls -Wno-frame-address  -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy  CMakeFiles/cmTC_ed896.dir/TIME_T_SIZE.c.obj -o cmTC_ed896   && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/.espressif/tools/cmake/3.30.2/share/cmake-3.30/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "C:/.espressif/tools/cmake/3.30.2/share/cmake-3.30/Modules/CheckCSourceCompiles.cmake:52 (cmake_check_source_compiles)"
+      - "C:/.espressif/tools/cmake/3.30.2/share/cmake-3.30/Modules/FindThreads.cmake:97 (CHECK_C_SOURCE_COMPILES)"
+      - "C:/.espressif/tools/cmake/3.30.2/share/cmake-3.30/Modules/FindThreads.cmake:163 (_threads_check_libc)"
+      - "C:/Users/Luis Miguel Cote/esp/v5.2/esp-idf/components/mbedtls/mbedtls/CMakeLists.txt:139 (find_package)"
+    checks:
+      - "Performing Test CMAKE_HAVE_LIBC_PTHREAD"
+    directories:
+      source: "D:/Estudio/desarrollo_web_boopcamp/Proyecto_final/sante-esp32-uv/build/CMakeFiles/CMakeScratch/TryCompile-ggg9hc"
+      binary: "D:/Estudio/desarrollo_web_boopcamp/Proyecto_final/sante-esp32-uv/build/CMakeFiles/CMakeScratch/TryCompile-ggg9hc"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "-mlongcalls -Wno-frame-address  -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy"
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/Luis Miguel Cote/esp/v5.2/esp-idf/tools/cmake;C:/Users/Luis Miguel Cote/esp/v5.2/esp-idf/tools/cmake/third_party"
+    buildResult:
+      variable: "CMAKE_HAVE_LIBC_PTHREAD"
+      cached: true
+      stdout: |
+        Change Dir: 'D:/Estudio/desarrollo_web_boopcamp/Proyecto_final/sante-esp32-uv/build/CMakeFiles/CMakeScratch/TryCompile-ggg9hc'
+        
+        Run Build Command(s): C:/.espressif/tools/ninja/1.12.1/ninja.exe -v cmTC_11c66
+        [1/2] C:\\.espressif\\tools\\xtensa-esp-elf\\esp-13.2.0_20230928\\xtensa-esp-elf\\bin\\xtensa-esp32-elf-gcc.exe -DCMAKE_HAVE_LIBC_PTHREAD  -mlongcalls -Wno-frame-address  -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy -o CMakeFiles/cmTC_11c66.dir/src.c.obj -c D:/Estudio/desarrollo_web_boopcamp/Proyecto_final/sante-esp32-uv/build/CMakeFiles/CMakeScratch/TryCompile-ggg9hc/src.c
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\.espressif\\tools\\xtensa-esp-elf\\esp-13.2.0_20230928\\xtensa-esp-elf\\bin\\xtensa-esp32-elf-gcc.exe -mlongcalls -Wno-frame-address  -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy  CMakeFiles/cmTC_11c66.dir/src.c.obj -o cmTC_11c66   && cd ."
+        C:/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/../../../../xtensa-esp-elf/bin/ld.exe: CMakeFiles/cmTC_11c66.dir/src.c.obj:(.literal+0x18): warning: pthread_exit is not implemented and will always fail
+        C:/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/../../../../xtensa-esp-elf/bin/ld.exe: CMakeFiles/cmTC_11c66.dir/src.c.obj:(.literal+0xc): warning: pthread_cancel is not implemented and will always fail
+        C:/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/../../../../xtensa-esp-elf/bin/ld.exe: CMakeFiles/cmTC_11c66.dir/src.c.obj:(.literal+0x8): warning: pthread_detach is not implemented and will always fail
+        C:/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/../../../../xtensa-esp-elf/bin/ld.exe: CMakeFiles/cmTC_11c66.dir/src.c.obj:(.literal+0x10): warning: pthread_join is not implemented and will always fail
+        C:/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/../../../../xtensa-esp-elf/bin/ld.exe: CMakeFiles/cmTC_11c66.dir/src.c.obj:(.literal+0x4): warning: pthread_create is not implemented and will always fail
+        C:/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/../../../../xtensa-esp-elf/bin/ld.exe: CMakeFiles/cmTC_11c66.dir/src.c.obj:(.literal+0x14): warning: pthread_atfork is not implemented and will always fail\x0d
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/.espressif/tools/cmake/3.30.2/share/cmake-3.30/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "C:/.espressif/tools/cmake/3.30.2/share/cmake-3.30/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "C:/.espressif/tools/cmake/3.30.2/share/cmake-3.30/Modules/CheckCCompilerFlag.cmake:51 (cmake_check_compiler_flag)"
+      - "C:/Users/Luis Miguel Cote/esp/v5.2/esp-idf/components/mbedtls/mbedtls/CMakeLists.txt:222 (CHECK_C_COMPILER_FLAG)"
+    checks:
+      - "Performing Test C_COMPILER_SUPPORTS_WFORMAT_SIGNEDNESS"
+    directories:
+      source: "D:/Estudio/desarrollo_web_boopcamp/Proyecto_final/sante-esp32-uv/build/CMakeFiles/CMakeScratch/TryCompile-33gkot"
+      binary: "D:/Estudio/desarrollo_web_boopcamp/Proyecto_final/sante-esp32-uv/build/CMakeFiles/CMakeScratch/TryCompile-33gkot"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "-mlongcalls -Wno-frame-address  -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy -Wall -Wextra -Wwrite-strings -Wmissing-prototypes -Wformat=2 -Wno-format-nonliteral -Wvla -Wlogical-op -Wshadow"
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/Luis Miguel Cote/esp/v5.2/esp-idf/tools/cmake;C:/Users/Luis Miguel Cote/esp/v5.2/esp-idf/tools/cmake/third_party"
+    buildResult:
+      variable: "C_COMPILER_SUPPORTS_WFORMAT_SIGNEDNESS"
+      cached: true
+      stdout: |
+        Change Dir: 'D:/Estudio/desarrollo_web_boopcamp/Proyecto_final/sante-esp32-uv/build/CMakeFiles/CMakeScratch/TryCompile-33gkot'
+        
+        Run Build Command(s): C:/.espressif/tools/ninja/1.12.1/ninja.exe -v cmTC_cbd00
+        [1/2] C:\\.espressif\\tools\\xtensa-esp-elf\\esp-13.2.0_20230928\\xtensa-esp-elf\\bin\\xtensa-esp32-elf-gcc.exe -DC_COMPILER_SUPPORTS_WFORMAT_SIGNEDNESS  -mlongcalls -Wno-frame-address  -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy -Wall -Wextra -Wwrite-strings -Wmissing-prototypes -Wformat=2 -Wno-format-nonliteral -Wvla -Wlogical-op -Wshadow    -Wformat-signedness -o CMakeFiles/cmTC_cbd00.dir/src.c.obj -c D:/Estudio/desarrollo_web_boopcamp/Proyecto_final/sante-esp32-uv/build/CMakeFiles/CMakeScratch/TryCompile-33gkot/src.c
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\.espressif\\tools\\xtensa-esp-elf\\esp-13.2.0_20230928\\xtensa-esp-elf\\bin\\xtensa-esp32-elf-gcc.exe -mlongcalls -Wno-frame-address  -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy -Wall -Wextra -Wwrite-strings -Wmissing-prototypes -Wformat=2 -Wno-format-nonliteral -Wvla -Wlogical-op -Wshadow  CMakeFiles/cmTC_cbd00.dir/src.c.obj -o cmTC_cbd00   && cd ."
+        
+      exitCode: 0
+...
